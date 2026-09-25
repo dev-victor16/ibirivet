@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibirivet | Clínica Veterinária em Ibirité - MG</title>
+  <meta name="description" content="Ibirivet Clínica Veterinária em Ibirité - MG. Consultas, vacinas, exames laboratoriais, ultrassonografia, cirurgias e atendimento domiciliar com carinho e dedicação ao seu pet.">
+  <meta name="keywords" content="veterinária ibirité, clínica veterinária ibirité, veterinário ibirité mg, exames pet ibirité, vacinação cães e gatos ibirité, consulta veterinária domiciliar ibirité">
+  <meta property="og:title" content="Ibirivet | Clínica Veterinária em Ibirité - MG">
+  <meta property="og:description" content="Cuidado veterinário completo com carinho, tecnologia e dedicação no coração de Ibirité. Agende pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="format-detection" content="telephone=yes">
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#" class="header-logo" aria-label="Ibirivet Clínica Veterinária - Página inicial">
+        <img src="img/logo-ibirivet.png" alt="Ibirivet Clínica Veterinária" class="logo-img">
+        <div class="logo-text-wrap">
+          <span class="logo-brand-title">IBIRIVET</span>
+          <span class="logo-brand-sub">Clínica Veterinária</span>
+        </div>
+      </a>
+      
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="#atendimento">Cuidados & Exames</a>
+        <a href="#sobre">A Clínica</a>
+        <a href="#servicos">Especialidades</a>
+        <a href="#instalacoes">Estrutura</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      
+      <a href="https://wa.me/5531987444024" class="header-contact-btn" target="_blank" rel="noopener">
+        Agendar Consulta
+      </a>
+      
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <a href="#" class="header-logo" onclick="closeMobileNav()">
+          <img src="img/logo-ibirivet.png" alt="Ibirivet Clínica Veterinária" class="logo-img">
+          <div class="logo-text-wrap">
+            <span class="logo-brand-title">IBIRIVET</span>
+            <span class="logo-brand-sub">Clínica Veterinária</span>
+          </div>
+        </a>
+      </div>
+      <a href="#atendimento" onclick="closeMobileNav()">Cuidados & Exames</a>
+      <a href="#sobre" onclick="closeMobileNav()">A Clínica</a>
+      <a href="#servicos" onclick="closeMobileNav()">Especialidades</a>
+      <a href="#instalacoes" onclick="closeMobileNav()">Estrutura</a>
+      <a href="#contato" onclick="closeMobileNav()">Contato</a>
+      
+      <div class="mobile-nav-footer">
+        <p>Fale conosco no WhatsApp</p>
+        <a href="https://wa.me/5531987444024" target="_blank" rel="noopener">(31) 98744-4024</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="img/hero.jpg" alt="Médica veterinária da Ibirivet examinando pet com carinho no consultório" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-text">
+          <span class="hero-label">Ibirité &bull; Praça Chafir Ferreira, 28</span>
+          <h1 class="hero-title">A saúde e o bem-estar<br>de quem você mais ama</h1>
+          <p class="hero-subtitle">Medicina veterinária dedicada, acolhimento humanizado e exames precisos para cães e gatos em Ibirité e região metropolitana.</p>
+        </div>
+        
+        <div class="hero-search">
+          <h3>Agendar Atendimento</h3>
+          <div class="search-field">
+            <label for="search-type">Tipo de Atendimento</label>
+            <select id="search-type">
+              <option value="">Selecione o atendimento</option>
+              <option value="consulta">Consulta Clínica Geral</option>
+              <option value="domiciliar">Consulta Domiciliar</option>
+              <option value="exames">Exames Laboratoriais</option>
+              <option value="ultrassom">Ultrassonografia / Imagem</option>
+              <option value="vacinas">Vacinação e Vermifugação</option>
+              <option value="cirurgia">Cirurgia & Procedimentos</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="search-property">Espécie do Pet</label>
+            <select id="search-property">
+              <option value="">Cão ou Gato</option>
+              <option value="cao">Cachorro</option>
+              <option value="gato">Gato</option>
+              <option value="outro">Outro animal de estimação</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="search-location">Modalidade / Preferência</label>
+            <select id="search-location">
+              <option value="">Na Clínica ou Domicílio</option>
+              <option value="clinica">Atendimento na Clínica (Centro)</option>
+              <option value="domicilio">Atendimento em Domicílio (Ibirité e região)</option>
+            </select>
+          </div>
+          <button class="search-btn" id="search-btn">Solicitar Horário via WhatsApp</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ========== TRUST STRIP ========== -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item">
+          <span class="trust-number">Praça Chafir Ferreira, 28</span>
+          <span class="trust-text">Centro — Ibirité / MG</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">Seg a Sex 8h–19h &bull; Sáb 8h–13h</span>
+          <span class="trust-text">Atendimento Clínico e Domiciliar</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">(31) 98744-4024</span>
+          <span class="trust-text">Ligue ou envie mensagem no WhatsApp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== ÁREAS DE ATENDIMENTO DESTAQUE ========== -->
+  <section class="featured-section" id="atendimento">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header-left">
+          <p class="section-label">Atenção Integral</p>
+          <h2 class="section-title">Cuidados dedicados para cada fase da vida</h2>
+        </div>
+        <a href="https://wa.me/5531987444024?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Ibirivet" class="section-link" target="_blank" rel="noopener">
+          Falar com a equipe veterinária
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      
+      <div class="properties-scroll stagger-children">
+        <!-- Card 1 -->
+        <article class="property-item">
+          <div class="property-image">
+            <span class="property-tag">Clínica & Prevenção</span>
+            <img src="img/consulta.jpg" alt="Veterinária da Ibirivet realizando consulta clínica e auscultação em filhote" loading="lazy">
+          </div>
+          <div class="property-info">
+            <p class="property-type">Consultas</p>
+            <h3 class="property-address">Clínica Geral & Preventiva</h3>
+            <p class="property-location">Ibirité — Na clínica ou no seu lar</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                Check-ups completos
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                Vacinação em dia
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                Cuidado gentil
+              </span>
+            </div>
+            <p class="property-price">Atendimento Humanizado <small>/ com hora marcada</small></p>
+          </div>
+        </article>
+        
+        <!-- Card 2 -->
+        <article class="property-item">
+          <div class="property-image">
+            <span class="property-tag">Diagnóstico</span>
+            <img src="img/exames.jpg" alt="Exame de imagem e ultrassonografia veterinária na clínica Ibirivet" loading="lazy">
+          </div>
+          <div class="property-info">
+            <p class="property-type">Exames</p>
+            <h3 class="property-address">Diagnóstico por Imagem & Laboratório</h3>
+            <p class="property-location">Praça Chafir Ferreira, Centro</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Ultrassonografia
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Exames de Sangue
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 14 14"/></svg>
+                Resultados Ágeis
+              </span>
+            </div>
+            <p class="property-price">Precisão Diagnóstica <small>/ suporte completo</small></p>
+          </div>
+        </article>
+        
+        <!-- Card 3 -->
+        <article class="property-item">
+          <div class="property-image">
+            <span class="property-tag">Conforto em Casa</span>
+            <img src="img/domiciliar.jpg" alt="Veterinária prestando atendimento domiciliar em Ibirité com carinho e comodidade" loading="lazy">
+          </div>
+          <div class="property-info">
+            <p class="property-type">Comodidade</p>
+            <h3 class="property-address">Atendimento Domiciliar</h3>
+            <p class="property-location">Ibirité, Sarzedo e bairros vizinhos</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Sem estresse de transporte
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
+                Horário agendado
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Para cães e gatos
+              </span>
+            </div>
+            <p class="property-price">Praticidade & Tranquilidade <small>/ na sua casa</small></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SOBRE A IBIRIVET ========== -->
+  <section class="about-section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images reveal-left">
+          <div class="about-img-main">
+            <img src="img/recepcao.jpg" alt="Recepção acolhedora e ambiente da Clínica Veterinária Ibirivet no Centro de Ibirité" loading="lazy">
+          </div>
+          <div class="about-img-secondary">
+            <img src="img/cirurgia.jpg" alt="Sala de procedimentos e bloco cirúrgico da Ibirivet com estrutura moderna" loading="lazy">
+          </div>
+          <div class="about-experience">
+            <span class="exp-number">4.7★</span>
+            <span class="exp-label">Avaliação no<br>Google (+400 reviews)</span>
+          </div>
+        </div>
+        
+        <div class="about-content reveal-right">
+          <p class="section-label">Sobre a Ibirivet</p>
+          <h2 class="section-title">Dedicação genuína,<br>cuidado que transforma vidas</h2>
+          <p class="about-text">
+            A Ibirivet nasceu com o compromisso de proporcionar medicina veterinária com afeto, transparência e alto rigor técnico em Ibirité e região. Entendemos que os animais não são apenas pacientes — eles são membros fundamentais das famílias que confiam em nosso trabalho.
+          </p>
+          <p class="about-text">
+            Com instalações preparadas no centro da cidade (Praça Chafir Ferreira), equipe atenciosa e estrutura para consultas, exames de sangue, exames de imagem e procedimentos, estamos prontos para acolher o seu amigo de quatro patas em qualquer momento da vida.
+          </p>
+          
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">400+</span>
+              <span class="stat-label">Avaliações positivas</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">6</span>
+              <span class="stat-label">Dias por semana</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Amor e respeito aos pets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SERVIÇOS / ESPECIALIDADES ========== -->
+  <section class="services-section" id="servicos">
+    <div class="container">
+      <div class="services-intro reveal">
+        <p class="section-label">Nossos Serviços</p>
+        <h2 class="section-title">Como cuidamos<br>do seu companheiro</h2>
+        <p>Da consulta de rotina aos diagnósticos avançados e suporte cirúrgico, conheça os serviços prestados na Ibirivet com máxima responsabilidade.</p>
+      </div>
+      
+      <div class="services-grid stagger-children">
+        <div class="service-item">
+          <span class="service-number">01</span>
+          <h3 class="service-title">Consultas Clínicas Gerais</h3>
+          <p class="service-desc">Avaliação clínica detalhada do estado geral de saúde, orientação nutricional, prevenção de enfermidades e prescrição de tratamentos precisos.</p>
+        </div>
+        
+        <div class="service-item">
+          <span class="service-number">02</span>
+          <h3 class="service-title">Consultas Domiciliares</h3>
+          <p class="service-desc">Atendimento veterinário no conforto da sua residência, ideal para filhotes em quarentena, animais idosos, gatos ariscos ou tutores com dificuldade de locomoção.</p>
+        </div>
+        
+        <div class="service-item">
+          <span class="service-number">03</span>
+          <h3 class="service-title">Exames Laboratoriais e Coleta</h3>
+          <p class="service-desc">Coleta de sangue, urina, fezes e testes rápidos para diagnósticos seguros e acompanhamento preventivo regular.</p>
+        </div>
+        
+        <div class="service-item">
+          <span class="service-number">04</span>
+          <h3 class="service-title">Exames de Imagem & Procedimentos</h3>
+          <p class="service-desc">Apoio diagnóstico completo com ultrassonografia e radiografia, além de procedimentos clínicos e cirúrgicos realizados com monitoramento e segurança.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== ESTRUTURA E AMBIENTES ========== -->
+  <section class="regions-section" id="instalacoes">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header-left">
+          <p class="section-label">Nossa Estrutura</p>
+          <h2 class="section-title">Ambientes preparados<br>para o bem-estar animal</h2>
+        </div>
+      </div>
+      
+      <div class="regions-mosaic stagger-children">
+        <div class="region-card">
+          <img src="img/recepcao.jpg" alt="Recepção e sala de espera da Ibirivet com espaço amplo para tutores e pets" loading="lazy">
+          <div class="region-card-overlay">
+            <h3 class="region-name">Recepção Aconchegante</h3>
+            <span class="region-count">Ambiente calmo para você e seu pet</span>
+          </div>
+        </div>
+        
+        <div class="region-card">
+          <img src="img/consulta.jpg" alt="Consultório veterinário com mesa de atendimento e iluminação adequada" loading="lazy">
+          <div class="region-card-overlay">
+            <h3 class="region-name">Consultórios Equipados</h3>
+            <span class="region-count">Higiene e cuidado individualizado</span>
+          </div>
+        </div>
+        
+        <div class="region-card">
+          <img src="img/cirurgia.jpg" alt="Centro cirúrgico e monitorização da clínica Ibirivet" loading="lazy">
+          <div class="region-card-overlay">
+            <h3 class="region-name">Centro Cirúrgico & Exames</h3>
+            <span class="region-count">Tecnologia diagnóstica e segurança cirúrgica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== DEPOIMENTOS ========== -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-layout">
+        <div class="testimonial-aside reveal-left">
+          <p class="section-label">Reconhecimento</p>
+          <h2 class="section-title">A confiança de quem ama seus pets</h2>
+          <p>Com mais de 400 avaliações positivas e nota 4.7 no Google, a dedicação da nossa equipe reflete o carinho de centenas de famílias de Ibirité e região.</p>
+        </div>
+        
+        <div class="testimonials-wrapper stagger-children">
+          <div class="testimonial-item">
+            <p class="testimonial-text">"Excelente atendimento! As veterinárias cuidam dos nossos animais com muito carinho e atenção aos detalhes. Sempre que meu cachorro precisou, fomos atendidos com rapidez e competência."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">A</div>
+              <div class="testimonial-meta">
+                <strong>Ana Paula M.</strong>
+                <span>Tutora de Pet — Ibirité, MG</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-item">
+            <p class="testimonial-text">"Clínica muito limpa, organizada e os profissionais são extremamente atenciosos. Fizemos exames e a consulta domiciliar nos ajudou imensamente. Super recomendo a Ibirivet!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">R</div>
+              <div class="testimonial-meta">
+                <strong>Rodrigo F.</strong>
+                <span>Tutor de Pet — Ibirité, MG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== VISUAL BREAK ========== -->
+  <div class="visual-break">
+    <div class="visual-break-bg">
+      <img src="img/carinho.jpg" alt="Veterinária da Ibirivet com cão e gato em momento de carinho" loading="lazy" aria-hidden="true">
+    </div>
+    <div class="visual-break-overlay"></div>
+    <div class="visual-break-content reveal">
+      <p>Cuidar da saúde dos animais é a nossa vocação.<br>Seu companheiro em mãos dedicadas e seguras.</p>
+    </div>
+  </div>
+
+
+  <!-- ========== CONTATO / CTA ========== -->
+  <section class="cta-section" id="contato">
+    <div class="container">
+      <div class="cta-grid">
+        <div class="cta-content reveal-left">
+          <p class="section-label">Fale com a Ibirivet</p>
+          <h2 class="section-title">Precisa agendar uma consulta<br>ou tirar dúvidas?</h2>
+          <p>Estamos localizados na Praça Chafir Ferreira, 28 — Centro de Ibirité, MG. Atendemos de segunda a sexta das 8h às 19h e aos sábados das 8h às 13h. Chame nossa equipe no WhatsApp!</p>
+          
+          <div class="contact-channels">
+            <a href="https://wa.me/5531987444024" class="contact-channel" target="_blank" rel="noopener">
+              <div class="contact-channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.613.613l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.512-.767-6.262-2.063l-.437-.34-3.2 1.073 1.073-3.2-.34-.437A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              </div>
+              <div class="contact-channel-info">
+                <h4>WhatsApp</h4>
+                <p>(31) 98744-4024</p>
+              </div>
+            </a>
+            
+            <a href="tel:+5531987444024" class="contact-channel">
+              <div class="contact-channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div class="contact-channel-info">
+                <h4>Telefone</h4>
+                <p>(31) 98744-4024</p>
+              </div>
+            </a>
+            
+            <a href="https://www.instagram.com/ibirivet" class="contact-channel" target="_blank" rel="noopener">
+              <div class="contact-channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+              <div class="contact-channel-info">
+                <h4>Instagram</h4>
+                <p>@ibirivet</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="cta-image reveal-scale">
+          <img src="img/domiciliar.jpg" alt="Atendimento veterinário e consulta em Ibirité" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#" class="header-logo footer-logo" aria-label="Ibirivet Clínica Veterinária - Página inicial">
+            <img src="img/logo-ibirivet.png" alt="Ibirivet Clínica Veterinária" class="logo-img">
+            <div class="logo-text-wrap">
+              <span class="logo-brand-title">IBIRIVET</span>
+              <span class="logo-brand-sub">Clínica Veterinária</span>
+            </div>
+          </a>
+          <p>Praça Chafir Ferreira, 28 — Centro<br>Ibirité — MG | CEP 32400-176<br>Telefone / WhatsApp: (31) 98744-4024</p>
+          
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ibirivet" target="_blank" rel="noopener" aria-label="Instagram da Ibirivet">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/5531987444024" target="_blank" rel="noopener" aria-label="WhatsApp da Ibirivet">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.613.613l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.512-.767-6.262-2.063l-.437-.34-3.2 1.073 1.073-3.2-.34-.437A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul>
+            <li><a href="#atendimento">Consultas Clínicas</a></li>
+            <li><a href="#atendimento">Consultas Domiciliares</a></li>
+            <li><a href="#servicos">Exames Laboratoriais</a></li>
+            <li><a href="#servicos">Ultrassonografia Pet</a></li>
+            <li><a href="#servicos">Vacinas & Vermífugos</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Horários</h4>
+          <ul>
+            <li><a href="#contato">Seg a Sex: 08:00 às 19:00</a></li>
+            <li><a href="#contato">Sábado: 08:00 às 13:00</a></li>
+            <li><a href="#contato">Domingo: Fechado</a></li>
+            <li><a href="#contato">Atendimento Domiciliar</a></li>
+            <li><a href="https://wa.me/5531987444024" target="_blank" rel="noopener">WhatsApp Direto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="#sobre">A Ibirivet</a></li>
+            <li><a href="#servicos">Especialidades</a></li>
+            <li><a href="#instalacoes">Estrutura</a></li>
+            <li><a href="#contato">Localização</a></li>
+            <li><a href="https://wa.me/5531987444024" target="_blank" rel="noopener">Fale com a Equipe</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Ibirivet Clínica Veterinária. Todos os direitos reservados.</p>
+        <span class="footer-creci">Ibirité — MG</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a href="https://wa.me/5531987444024" class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp da Ibirivet">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.613.613l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.512-.767-6.262-2.063l-.437-.34-3.2 1.073 1.073-3.2-.34-.437A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
