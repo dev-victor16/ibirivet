@@ -112,6 +112,35 @@ document.addEventListener('DOMContentLoaded', () => {
       // Start typewriter after hero fades in
       setTimeout(typeEffect, 1200);
     }
+
+    // ---- Hero Inline Stats Counter ----
+    const heroStatNumbers = document.querySelectorAll('.hero-stat-number');
+    if (heroStatNumbers.length > 0) {
+      setTimeout(() => {
+        heroStatNumbers.forEach(el => {
+          const target = parseInt(el.getAttribute('data-target'));
+          if (isNaN(target)) return;
+          
+          const duration = 2000;
+          const startTime = performance.now();
+          
+          function animateHeroStat(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(eased * target);
+            
+            el.textContent = current.toLocaleString('pt-BR');
+            
+            if (progress < 1) {
+              requestAnimationFrame(animateHeroStat);
+            }
+          }
+          
+          requestAnimationFrame(animateHeroStat);
+        });
+      }, 800);
+    }
   }
 
 
