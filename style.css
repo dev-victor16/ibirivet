@@ -327,9 +327,10 @@ ul, ol {
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 700px;
+  min-height: 750px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -355,10 +356,10 @@ ul, ol {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(13, 48, 78, 0.95) 0%,
-    rgba(13, 48, 78, 0.6) 40%,
-    rgba(13, 48, 78, 0.3) 70%,
-    rgba(13, 48, 78, 0.15) 100%
+    rgba(13, 48, 78, 0.96) 0%,
+    rgba(13, 48, 78, 0.65) 45%,
+    rgba(13, 48, 78, 0.35) 75%,
+    rgba(13, 48, 78, 0.2) 100%
   );
 }
 
@@ -366,7 +367,8 @@ ul, ol {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding-bottom: 90px;
+  padding-top: 80px;
+  padding-bottom: 70px;
 }
 
 .hero-container-center {
@@ -377,7 +379,7 @@ ul, ol {
 }
 
 .hero-text-center {
-  max-width: 820px;
+  max-width: 960px;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -398,22 +400,22 @@ ul, ol {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(38px, 5.8vw, 68px);
+  font-size: clamp(44px, 6.5vw, 76px);
   font-weight: 400;
   color: var(--color-white);
-  line-height: 1.15;
-  margin-bottom: 24px;
+  line-height: 1.14;
+  margin-bottom: 26px;
   letter-spacing: -0.5px;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
 }
 
 .hero-subtitle {
-  font-size: clamp(16px, 1.8vw, 19px);
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.8;
-  max-width: 660px;
-  margin: 0 auto 36px;
-  min-height: 36px;
+  font-size: clamp(17px, 2.1vw, 22px);
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 0 auto 40px;
+  min-height: 40px;
 }
 
 /* --- Hero Inline Stats --- */
@@ -421,8 +423,14 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  margin-bottom: 36px;
+  gap: 36px;
+  margin-bottom: 44px;
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 60px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   opacity: 0;
   transform: translateY(15px);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
@@ -437,12 +445,12 @@ ul, ol {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
 
 .hero-stat-number {
   font-family: var(--font-heading);
-  font-size: clamp(26px, 3.5vw, 38px);
+  font-size: clamp(30px, 4vw, 44px);
   font-weight: 400;
   color: var(--color-white);
   line-height: 1;
@@ -451,23 +459,23 @@ ul, ol {
 
 .hero-stat-plus {
   font-family: var(--font-heading);
-  font-size: clamp(20px, 2.8vw, 30px);
+  font-size: clamp(24px, 3.2vw, 34px);
   color: var(--color-accent-light);
   font-weight: 400;
 }
 
 .hero-stat-label {
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .hero-stat-divider {
   width: 1px;
-  height: 36px;
-  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.25), transparent);
+  height: 42px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.3), transparent);
 }
 
 /* --- Hero Actions & Premium Buttons --- */
@@ -475,22 +483,22 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 20px;
   flex-wrap: wrap;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .hero-whatsapp-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   background: linear-gradient(135deg, #25d366 0%, #128C7E 100%);
   color: #ffffff;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.3px;
-  padding: 18px 36px;
+  padding: 20px 42px;
   border-radius: 60px;
   box-shadow: 0 8px 32px rgba(37, 211, 102, 0.35), inset 0 1px 0 rgba(255,255,255,0.2);
   transition: all var(--transition-smooth);
@@ -525,8 +533,8 @@ ul, ol {
 }
 
 .hero-whatsapp-icon {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   fill: #ffffff;
   flex-shrink: 0;
 }
@@ -534,23 +542,23 @@ ul, ol {
 .hero-secondary-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.06);
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.08);
   color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.4px;
-  padding: 18px 32px;
+  padding: 20px 36px;
   border-radius: 60px;
   transition: all var(--transition-smooth);
 }
 
 .hero-arrow-icon {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   transition: transform 0.3s ease;
 }
 
@@ -688,7 +696,7 @@ ul, ol {
 .hero-rotating-wrapper {
   display: inline-block;
   position: relative;
-  min-width: 280px;
+  min-width: 320px;
   text-align: left;
   vertical-align: baseline;
 }
