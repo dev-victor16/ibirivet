@@ -44,7 +44,11 @@ Desenvolvido para proporcionar uma experiência visual acolhedora, sofisticada e
 
 O projeto é desenvolvido em HTML5, CSS3 e JavaScript puro, sem necessidade de compilação ou dependências externas:
 
-1. Abra a pasta do projeto no navegador:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/dev-victor16/ibirivet.git
+   ```
+2. Abra a pasta do projeto no navegador:
    Dê dois cliques no arquivo `index.html` ou execute via Live Server.
 
 ---
