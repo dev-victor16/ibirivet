@@ -111,32 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ---- Appointment button interaction ----
-  const searchBtn = document.getElementById('search-btn');
-  if (searchBtn) {
-    searchBtn.addEventListener('click', () => {
-      const typeSelect = document.getElementById('search-type');
-      const petSelect = document.getElementById('search-property');
-      const locationSelect = document.getElementById('search-location');
-      
-      const typeText = typeSelect.options[typeSelect.selectedIndex]?.text || '';
-      const petText = petSelect.options[petSelect.selectedIndex]?.text || '';
-      const locText = locationSelect.options[locationSelect.selectedIndex]?.text || '';
-      
-      let message = 'Olá, equipe Ibirivet! Gostaria de informações para agendamento.';
-      const details = [];
-      if (typeSelect.value) details.push(`*Serviço:* ${typeText}`);
-      if (petSelect.value) details.push(`*Pet:* ${petText}`);
-      if (locationSelect.value) details.push(`*Preferência:* ${locText}`);
-      
-      if (details.length > 0) {
-        message += '\n\n' + details.join('\n');
-      }
-      
-      const whatsappUrl = `https://wa.me/5531987444024?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
-    });
-  }
+
 
 
   // ---- Parallax-like subtle effect on hero image ----
