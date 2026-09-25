@@ -52,6 +52,66 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       hero.classList.add('visible');
     }, 200);
+
+    // ---- Rotating Words ----
+    const rotatingWords = document.querySelectorAll('.rotating-word');
+    let currentWordIndex = 0;
+
+    if (rotatingWords.length > 0) {
+      setInterval(() => {
+        rotatingWords[currentWordIndex].classList.remove('active');
+        currentWordIndex = (currentWordIndex + 1) % rotatingWords.length;
+        rotatingWords[currentWordIndex].classList.add('active');
+      }, 2500);
+    }
+
+    // ---- Typewriter Effect ----
+    const typewriterEl = document.getElementById('hero-typewriter');
+    if (typewriterEl) {
+      const phrases = [
+        'Medicina veterinária dedicada, com carinho e tecnologia em Ibirité.',
+        'Consultas, vacinas, exames e cirurgias para cães e gatos.',
+        'Atendimento domiciliar com o conforto que seu pet merece.',
+        'Acolhimento humanizado para a família inteira — incluindo os de 4 patas.'
+      ];
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typingSpeed = 45;
+
+      function typeEffect() {
+        const currentPhrase = phrases[phraseIndex];
+
+        if (!isDeleting) {
+          typewriterEl.textContent = currentPhrase.substring(0, charIndex + 1);
+          charIndex++;
+
+          if (charIndex === currentPhrase.length) {
+            // Pause before deleting
+            isDeleting = true;
+            typingSpeed = 2500;
+          } else {
+            typingSpeed = 35 + Math.random() * 30;
+          }
+        } else {
+          typewriterEl.textContent = currentPhrase.substring(0, charIndex - 1);
+          charIndex--;
+
+          if (charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            typingSpeed = 400;
+          } else {
+            typingSpeed = 18;
+          }
+        }
+
+        setTimeout(typeEffect, typingSpeed);
+      }
+
+      // Start typewriter after hero fades in
+      setTimeout(typeEffect, 1200);
+    }
   }
 
 
